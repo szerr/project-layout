@@ -15,6 +15,20 @@ Examples:
 
 ## `/internal/pkg`
 
+`/internal` 层共享库存放位置
+
 Examples:
 
 * https://github.com/hashicorp/waypoint/tree/main/internal/pkg
+
+## `/internal/service`
+
+api 定义的实现层，只做 DTO->DO 的转换，组装biz层的逻辑。不要带业务逻辑。
+
+## `/internal/biz`
+
+业务逻辑的组装层，repo （Repository） 接口在这里定义，使用依赖倒置原则。
+
+## `internal/data`
+
+业务数据访问，包含 cache、db 等封装，实现了 biz 的 repo 接口
