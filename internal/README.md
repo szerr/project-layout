@@ -23,7 +23,7 @@ Examples:
 
 ## `/internal/service`
 
-api 定义的实现层，只做 DTO->DO 的转换，组装biz层的逻辑。不要带业务逻辑。
+api 定义的实现层，只做 数据传技术对象（Data Transfer Object）-> 领域对象（Domain object） 的转换。不要带业务逻辑，只带编排逻辑。
 
 ## `/internal/biz`
 
